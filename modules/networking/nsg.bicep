@@ -1,4 +1,4 @@
-param location string = 'westeurope'
+param location string
 param name string
 
 resource nsg 'Microsoft.Network/networkSecurityGroups@2021-02-01' = {

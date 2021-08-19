@@ -1,5 +1,5 @@
 param rtname string
-param location string = 'westeurope'
+param location string
 
 resource rt 'Microsoft.Network/routeTables@2021-02-01' = {
   name: rtname

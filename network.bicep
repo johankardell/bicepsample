@@ -1,4 +1,4 @@
-param location string = 'westeurope'
+param location string
 
 module nsgModule 'modules/networking/nsg.bicep' = {
   name: 'defaultNSG'

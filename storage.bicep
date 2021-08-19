@@ -1,4 +1,4 @@
-param location string = 'westeurope'
+param location string
 
 module sa 'modules/storage/storageaccount.bicep' = {
   name: 'sa'
