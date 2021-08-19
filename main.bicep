@@ -1,4 +1,4 @@
-module networking 'network.bicep' =  {
+module networking 'network.bicep' = {
   name: 'networking'
 }
 

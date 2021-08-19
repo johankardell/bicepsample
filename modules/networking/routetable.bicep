@@ -15,7 +15,6 @@ resource rt 'Microsoft.Network/routeTables@2021-02-01' = {
         }
       }
     ]
-
   }
 }
 

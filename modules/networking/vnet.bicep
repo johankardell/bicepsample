@@ -5,8 +5,8 @@ param rtId string
 
 resource virtualnetwork 'Microsoft.Network/virtualNetworks@2021-02-01' = {
   location: location
-
   name: vnetname
+
   properties: {
     addressSpace: {
       addressPrefixes: [
