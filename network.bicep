@@ -16,11 +16,22 @@ module rt 'modules/networking/routetable.bicep' = {
   }
 }
 
-module vnet 'modules/networking/vnet.bicep' = {
+module firstVnet 'modules/networking/vnet.bicep' = {
   name: 'defaultVnet'
   params: {
-    location: 'westeurope'
-    vnetname: 'defaultVnet'
+    location: location
+    vnetname: 'firstVnet'
+    nsgId: nsg.outputs.id
+    rtId: rt.outputs.id
+  }
+}
+
+
+module secondVnet 'modules/networking/vnet.bicep' = {
+  name: 'secondVnet'
+  params: {
+    location: location
+    vnetname: 'secondVnet'
     nsgId: nsg.outputs.id
     rtId: rt.outputs.id
   }
