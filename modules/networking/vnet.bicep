@@ -1,9 +1,9 @@
 param vnetname string
-param location string = 'westeurope'
+param location string
 param nsgId string
 param rtId string
 
-resource vnet 'Microsoft.Network/virtualNetworks@2021-02-01' = {
+resource virtualnetwork 'Microsoft.Network/virtualNetworks@2021-02-01' = {
   location: location
 
   name: vnetname
