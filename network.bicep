@@ -1,6 +1,6 @@
 param location string = 'westeurope'
 
-module nsg 'modules/nsg.bicep' = {
+module nsg 'modules/networking/nsg.bicep' = {
    name: 'defaultNSG'
    params: {
      name: 'defaultNSG'
@@ -8,7 +8,7 @@ module nsg 'modules/nsg.bicep' = {
    }
 }
 
-module rt 'modules/routetable.bicep' = {
+module rt 'modules/networking/routetable.bicep' = {
    name: 'defaultRT'
    params: {
      location: location
@@ -16,8 +16,8 @@ module rt 'modules/routetable.bicep' = {
    }
 }
 
-module vnet 'modules/vnet.bicep' = {
-  name: 'vnet'
+module vnet 'modules/networking/vnet.bicep' = {
+  name: 'defaultVnet'
   params: {
     location: 'westeurope'
     vnetname: 'test'
