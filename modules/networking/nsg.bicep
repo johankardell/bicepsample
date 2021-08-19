@@ -6,4 +6,4 @@ resource nsg 'Microsoft.Network/networkSecurityGroups@2021-02-01' = {
   location: location
 }
 
-output id string = nsg.id
+output nsgid string = nsg.id

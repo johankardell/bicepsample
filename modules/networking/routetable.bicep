@@ -18,4 +18,4 @@ resource rt 'Microsoft.Network/routeTables@2021-02-01' = {
   }
 }
 
-output id string = rt.id
+output rtid string = rt.id
