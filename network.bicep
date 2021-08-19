@@ -10,6 +10,10 @@ module nsg 'modules/nsg.bicep' = {
 
 module rt 'modules/routetable.bicep' = {
    name: 'defaultRT'
+   params: {
+     location: location
+     rtname: 'defaultRT'
+   }
 }
 
 module vnet 'modules/vnet.bicep' = {
