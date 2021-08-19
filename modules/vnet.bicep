@@ -1,6 +1,7 @@
 param vnetname string
 param location string = 'westeurope'
 param nsgId string
+param rtId string
 
 resource vnet 'Microsoft.Network/virtualNetworks@2021-02-01' = {
   location: location
@@ -21,6 +22,9 @@ resource vnet 'Microsoft.Network/virtualNetworks@2021-02-01' = {
           networkSecurityGroup: {
             id: nsgId
           }
+          routeTables: {
+            id: rtId
+          }
         }
       }
       {
@@ -29,6 +33,9 @@ resource vnet 'Microsoft.Network/virtualNetworks@2021-02-01' = {
           addressPrefix: '10.0.1.0/24'
           networkSecurityGroup: {
             id: nsgId
+          }
+          routeTables: {
+            id: rtId
           }
         }
       }

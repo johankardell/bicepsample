@@ -8,9 +8,9 @@ module nsg 'modules/nsg.bicep' = {
    }
 }
 
-// module rt 'modules/routetable.bicep' = {
-//   name: 'defaultRT'
-// }
+module rt 'modules/routetable.bicep' = {
+   name: 'defaultRT'
+}
 
 module vnet 'modules/vnet.bicep' = {
   name: 'vnet'
@@ -18,5 +18,6 @@ module vnet 'modules/vnet.bicep' = {
     location: 'westeurope'
     vnetname: 'test'
     nsgId: nsg.outputs.id
+    rtId: rt.outputs.id
   }
 }
